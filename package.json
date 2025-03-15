@@ -1,5 +1,6 @@
 {
   "name": "my-react-app",
+"homepage": "https://Aak1607.github.io/Akhilesh-Portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,11 +23,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+,
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -49,5 +49,8 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
