@@ -22,7 +22,7 @@ const Header = () => {
             <header id="home" className="hero-section">
                 <div className="container">
                     <div className="image-container">
-                        <img src="/DP.jpg" alt="Akhilesh Chaurasia" className="profile-pic" />
+                    <img src="./DP.jpg" alt="Profile" />
                     </div>
                     <div className="text-container">
                         <h1>Hi, I'm Akhilesh Chaurasia</h1>
