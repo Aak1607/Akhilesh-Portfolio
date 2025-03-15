@@ -33,7 +33,7 @@ const Header = () => {
                             <a href="https://github.com/Aak1607" target="_blank" rel="noopener noreferrer">
                                 <FaGithub className="social-icon" />
                             </a>
-                            <a href="https://your-portfolio.com" target="_blank" rel="noopener noreferrer">
+                            <a href="https://aak1607.github.io/Akhilesh-Portfolio/" target="_blank" rel="noopener noreferrer">
                                 <FaGlobe className="social-icon" />
                             </a>
                         </div>
