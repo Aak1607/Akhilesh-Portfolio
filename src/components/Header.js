@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/styles.css";
-import { FaLinkedin, FaGithub, FaGlobe } from "react-icons/fa"; // Import icons
+import { FaBars, FaTimes, FaLinkedin, FaGithub, FaGlobe } from "react-icons/fa";
 
 const Header = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
     return (
         <>
             {/* Top Navigation Bar */}
             <nav className="top-navbar">
-                <ul>
+                <div className="menu-icon" onClick={() => setIsMobile(!isMobile)}>
+                    {isMobile ? <FaTimes /> : <FaBars />}
+                </div>
+                <ul className={isMobile ? "nav-links-mobile" : "nav-links"} onClick={() => setIsMobile(false)}>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Professional Experience</a></li>
@@ -22,7 +27,7 @@ const Header = () => {
             <header id="home" className="hero-section">
                 <div className="container">
                     <div className="image-container">
-                    <img src="./DP.jpg" alt="Profile" />
+                        <img src={`${process.env.PUBLIC_URL}/DP.jpg`} alt="Profile" />
                     </div>
                     <div className="text-container">
                         <h1>Hi, I'm Akhilesh Chaurasia</h1>
