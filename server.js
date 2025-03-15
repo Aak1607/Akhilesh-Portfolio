@@ -5,14 +5,8 @@ const bodyParser = require("body-parser");
 
 const app = express(); // ✅ Ensure 'app' is properly initialized
 
-const cors = require("cors");
-
-app.use(cors({
-    origin: "https://akhilesh-portfolio-web.onrender.com",
-    methods: "GET,POST",
-    credentials: true
-}));
-
+app.use(cors());
+app.use(bodyParser.json());
 
 // ✅ MySQL Connection Setup
 const db = mysql.createConnection({

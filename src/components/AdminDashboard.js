@@ -4,12 +4,11 @@ const AdminDashboard = () => {
     const [messages, setMessages] = useState([]);
 
     useEffect(() => {
-        fetch("https://your-backend-service.onrender.com/messages")
+        fetch("http://localhost:5000/contact")
             .then((res) => res.json())
             .then((data) => setMessages(data))
             .catch((error) => console.error("Error fetching messages", error));
     }, []);
-    
 
     return (
         <div>
