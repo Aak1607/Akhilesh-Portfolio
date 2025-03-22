@@ -113,6 +113,44 @@ body {
   color: #ffcc00;
 }
 
+
+/* Default Light Theme */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+}
+
+/* Apply theme to body */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Style for Theme Toggle Button */
+.theme-toggle {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.theme-toggle:hover {
+    opacity: 0.8;
+}
+
+
+/* Experience section */
 .experience-section {
   padding: 40px;
   background-color: #f8f9fa;
