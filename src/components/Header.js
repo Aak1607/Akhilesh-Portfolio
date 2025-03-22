@@ -5,15 +5,17 @@ import { FaBars, FaTimes, FaLinkedin, FaGithub, FaGlobe } from "react-icons/fa";
 const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
 
+    const renderMenuIcon = isMobile ? <FaTimes /> : <FaBars />;
+
     return (
         <>
             {/* Top Navigation Bar */}
             <nav className="top-navbar">
                 <div className="menu-icon" onClick={() => setIsMobile(!isMobile)}>
-                    {isMobile ? <FaTimes /> : <FaBars />}
+                    {renderMenuIcon}
                 </div>
-                <ul className={isMobile ? "nav-links-mobile" : "nav-links"} onClick={() => setIsMobile(false)}>
-                    <li><a href="#home">Home</a></li>
+                <ul className={`nav-links ${isMobile ? "nav-links-mobile" : ""}`} onClick={() => setIsMobile(false)}>
+                <li><a href="#home">Home</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Professional Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
