@@ -63,7 +63,7 @@ body {
 }
 
 /* Hide Navbar Initially in Mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 100%) {
   .nav-links {
       display: none;
   }
